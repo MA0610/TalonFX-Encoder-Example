@@ -9,22 +9,24 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonFX;
 
 
 
 public class tankDrive extends SubsystemBase {
   /** Creates a new tankDrive. */
 
-VictorSPX FLDrive, BLDrive, FRDrive, BRDrive;
+TalonFX FLDrive, BLDrive, FRDrive, BRDrive;
 
 
 
   public tankDrive() {
 
-FRDrive = new VictorSPX(Constants.FRMotor);
-BRDrive = new VictorSPX(Constants.BRMotor);
-FLDrive = new VictorSPX(Constants.FLMotor);
-BLDrive = new VictorSPX(Constants.BLMotor);
+FRDrive = new TalonFX(Constants.FRMotor);
+BRDrive = new TalonFX(Constants.BRMotor);
+FLDrive = new TalonFX(Constants.FLMotor);
+BLDrive = new TalonFX(Constants.BLMotor);
 
 
   }
